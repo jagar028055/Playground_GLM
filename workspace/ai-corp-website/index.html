@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Corp - 人工知能とデータ分析でビジネスを変革">
+    <meta name="keywords" content="AI, 人工知能, データ分析, 機械学習, ビジネスソリューション">
+    <meta name="author" content="AI Corp">
+    <title data-i18n="site.title">AI Corp - 人工知能でビジネスを変革</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+
+    <style>
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Critical CSS - Above the Fold */
+        :root {
+            --color-white: #ffffff;
+            --color-black: #000000;
+            --color-gray-200: #e5e7eb;
+            --color-gray-300: #d1d5db;
+            --color-gray-600: #4b5563;
+            --color-gray-700: #374151;
+            --color-gray-800: #1f2937;
+            --color-gray-900: #111827;
+            --font-japanese: 'Noto Sans JP', sans-serif;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 6rem;
+            --container-max-width: 1200px;
+            --radius-md: 8px;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition-base: 300ms ease-in-out;
+            --transition-fast: 150ms ease-in-out;
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{font-size:16px;scroll-behavior:smooth}
+        body{
+            font-family:var(--font-japanese);
+            font-size:1rem;
+            line-height:1.75;
+            color:var(--color-gray-900);
+            background:var(--color-white);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-family:var(--font-japanese);
+            font-weight:600;
+            line-height:1.25;
+            color:var(--color-gray-900);
+            margin-bottom:var(--spacing-sm)
+        }
+        h1{font-size:clamp(2rem,5vw,3.5rem)}
+        h2{font-size:clamp(1.75rem,4vw,2.5rem)}
+        p{margin-bottom:var(--spacing-sm)}
+        a{
+            color:var(--color-gray-700);
+            text-decoration:none;
+            transition:color var(--transition-fast)
+        }
+        a:hover{color:var(--color-black)}
+        img{max-width:100%;height:auto;display:block}
+        ul,ol{list-style:none}
+        .container{
+            width:100%;
+            max-width:var(--container-max-width);
+            margin:0 auto;
+            padding:0 var(--spacing-md)
+        }
+        .btn{
+            display:inline-block;
+            padding:0.75rem 1.5rem;
+            font-size:1rem;
+            font-weight:500;
+            text-align:center;
+            border-radius:var(--radius-md);
+            cursor:pointer;
+            transition:all var(--transition-base);
+            border:2px solid transparent
+        }
+        .btn-primary{
+            background:var(--color-black);
+            color:var(--color-white)
+        }
+        .btn-primary:hover{
+            background:var(--color-gray-800);
+            transform:translateY(-2px);
+            box-shadow:var(--shadow-lg)
+        }
+        .btn-secondary{
+            background:var(--color-white);
+            color:var(--color-black);
+            border-color:var(--color-gray-300)
+        }
+        .btn-secondary:hover{
+            border-color:var(--color-black);
+            background:var(--color-gray-50)
+        }
+        .btn-small{padding:0.5rem 1rem;font-size:0.875rem}
+        .header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            background:rgba(255,255,255,0.95);
+            backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--color-gray-200);
+            z-index:1000
+        }
+        .header-inner{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:var(--spacing-sm) 0
+        }
+        .logo{display:flex;align-items:center;text-decoration:none}
+        .logo img{display:block;width:auto;height:50px}
+        .logo:hover{opacity:0.8}
+        .hero-section{
+            padding:var(--spacing-3xl) 0;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            position:relative;
+            background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color:var(--color-white)
+        }
+        .hero-title{
+            color:var(--color-white);
+            margin-bottom:var(--spacing-md);
+            font-size:clamp(2rem,5vw,3.5rem)
+        }
+        .hero-subtitle{
+            color:rgba(255,255,255,0.9);
+            font-size:clamp(1rem,2vw,1.25rem);
+            margin-bottom:var(--spacing-lg);
+            max-width:600px
+        }
+        .hero-buttons{
+            display:flex;
+            gap:var(--spacing-sm);
+            flex-wrap:wrap
+        }
+        @media (max-width:1023px){
+            .hero-buttons{flex-direction:column;width:100%}
+            .hero-buttons .btn{width:100%}
+        }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Logo -->
+                <a href="#" class="logo" data-i18n="header.logo" aria-label="AI Corp Home">
+                    <img src="assets/icons/logo.svg" alt="AI Corp Logo" width="200" height="50">
+                </a>
+
+                <!-- Navigation -->
+                <nav class="nav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link" data-i18n="header.nav.services">サービス</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#products" class="nav-link" data-i18n="header.nav.products">製品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#cases" class="nav-link" data-i18n="header.nav.cases">実績</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#company" class="nav-link" data-i18n="header.nav.company">会社概要</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#careers" class="nav-link" data-i18n="header.nav.careers">採用</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link" data-i18n="header.nav.contact">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="language-btn" id="languageToggle" aria-label="Language switch">
+                            <i class="fas fa-globe"></i>
+                            <span class="current-lang" data-i18n="header.language">JA</span>
+                        </button>
+                        <ul class="language-dropdown" id="languageDropdown" role="menu">
+                            <li><button class="language-option" data-lang="ja" aria-label="Switch to Japanese">日本語</button></li>
+                            <li><button class="language-option" data-lang="en" aria-label="Switch to English">English</button></li>
+                            <li><button class="language-option" data-lang="zh" aria-label="Switch to Chinese">中文</button></li>
+                        </ul>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="#contact" class="btn btn-primary btn-small" data-i18n="header.cta">
+                        無料相談
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main" id="main-content">
+    <!-- 1. ヒーローセクション -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+        <div class="container">
+            <h1 id="hero-title" class="hero-title" data-i18n="hero.title" data-animate="fade-up">人工知能で<br>ビジネスの未来を切り拓く</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle" data-animate="fade-up" data-animate-delay="200">最先端のAI技術とデータ分析で、<br>あなたのビジネスを次のステージへ</p>
+            <div class="hero-buttons" data-animate="fade-up" data-animate-delay="400">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.contact">お問い合わせ</a>
+                <a href="#services" class="btn btn-secondary" data-i18n="hero.services">サービスを見る</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- 2. サービス概要 -->
+    <section id="services" class="services-section" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title" data-i18n="services.title" data-animate="fade-up">サービス概要</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle" data-animate="fade-up" data-animate-delay="100">AI・データ分析ソリューションでビジネス課題を解決</p>
+
+            <div class="services-grid">
+                <article class="service-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.ai.title">AIコンサルティング</h3>
+                    <p class="service-description" data-i18n="services.ai.description">ビジネス課題に最適なAIソリューションを設計・提案</p>
+                </article>
+
+                <article class="service-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.data.title">データ分析</h3>
+                    <p class="service-description" data-i18n="services.data.description">ビッグデータを活用した高度な分析・予測モデル構築</p>
+                </article>
+
+                <article class="service-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.automation.title">業務自動化</h3>
+                    <p class="service-description" data-i18n="services.automation.description">AI・RPAによる業務プロセスの効率化・自動化</p>
+                </article>
+
+                <article class="service-card" data-animate="fade-up" data-animate-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="service-title" data-i18n="services.custom.title">カスタムAI開発</h3>
+                    <p class="service-description" data-i18n="services.custom.description">お客様のニーズに合わせた独自AIシステムの開発</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 製品紹介 -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="products.title" data-animate="fade-up">製品紹介</h2>
+            <p class="section-subtitle" data-i18n="products.subtitle" data-animate="fade-up" data-animate-delay="100">最先端のAI製品ラインナップ</p>
+
+            <div class="products-grid">
+                <article class="product-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="product-image">
+                        <div class="placeholder-image">AI Platform</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="products.platform.title">AI Platform</h3>
+                        <p class="product-description" data-i18n="products.platform.description">機械学習モデルの開発・運用を一元管理する統合プラットフォーム</p>
+                        <ul class="product-features">
+                            <li data-i18n="products.platform.feature1">ノーコードモデル開発</li>
+                            <li data-i18n="products.platform.feature2">自動モデル最適化</li>
+                            <li data-i18n="products.platform.feature3">リアルタイム推論API</li>
+                        </ul>
+                        <a href="#contact" class="product-link" data-i18n="products.learnMore">詳しく見る →</a>
+                    </div>
+                </article>
+
+                <article class="product-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="product-image">
+                        <div class="placeholder-image">Analytics Pro</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="products.analytics.title">Analytics Pro</h3>
+                        <p class="product-description" data-i18n="products.analytics.description">高度なデータ分析と可視化を実現する次世代ツール</p>
+                        <ul class="product-features">
+                            <li data-i18n="products.analytics.feature1">インタラクティブダッシュボード</li>
+                            <li data-i18n="products.analytics.feature2">予測分析</li>
+                            <li data-i18n="products.analytics.feature3">自然言語クエリ</li>
+                        </ul>
+                        <a href="#contact" class="product-link" data-i18n="products.learnMore">詳しく見る →</a>
+                    </div>
+                </article>
+
+                <article class="product-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="product-image">
+                        <div class="placeholder-image">AutoML Suite</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title" data-i18n="products.automl.title">AutoML Suite</h3>
+                        <p class="product-description" data-i18n="products.automl.description">専門知識がなくても高精度なAIモデルを作成できる自動化ツール</p>
+                        <ul class="product-features">
+                            <li data-i18n="products.automl.feature1">自動特徴量エンジニアリング</li>
+                            <li data-i18n="products.automl.feature2">モデル自動選定</li>
+                            <li data-i18n="products.automl.feature3">ワンクリックデプロイ</li>
+                        </ul>
+                        <a href="#contact" class="product-link" data-i18n="products.learnMore">詳しく見る →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 会社概要 -->
+    <section id="company" class="company-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="company.title" data-animate="fade-up">会社概要</h2>
+
+            <div class="company-grid">
+                <div class="company-info" data-animate="fade-right">
+                    <h3 class="company-subtitle" data-i18n="company.vision.title">ビジョン</h3>
+                    <p class="company-text" data-i18n="company.vision.text">AI技術を通じて、社会のあらゆる課題を解決し、<br>持続可能な未来を創造する</p>
+
+                    <h3 class="company-subtitle" data-i18n="company.mission.title">ミッション</h3>
+                    <p class="company-text" data-i18n="company.mission.text">最先端のAI技術をあらゆる企業に届け、<br>ビジネスの可能性を広げる</p>
+                </div>
+
+                <div class="company-details" data-animate="fade-left" data-animate-delay="200">
+                    <dl class="company-list">
+                        <dt data-i18n="company.name">会社名</dt>
+                        <dd data-i18n="company.nameValue">AI株式会社</dd>
+
+                        <dt data-i18n="company.founded">設立</dt>
+                        <dd data-i18n="company.foundedValue">2020年4月1日</dd>
+
+                        <dt data-i18n="company.capital">資本金</dt>
+                        <dd data-i18n="company.capitalValue">5億円</dd>
+
+                        <dt data-i18n="company.ceo">代表取締役CEO</dt>
+                        <dd data-i18n="company.ceoValue">山田 太郎</dd>
+
+                        <dt data-i18n="company.employees">従業員数</dt>
+                        <dd data-i18n="company.employeesValue">150名</dd>
+
+                        <dt data-i18n="company.location">本社所在地</dt>
+                        <dd data-i18n="company.locationValue">東京都渋谷区神宮前1-2-3</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 実績・ケーススタディ -->
+    <section id="cases" class="cases-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="cases.title" data-animate="fade-up">実績・ケーススタディ</h2>
+            <p class="section-subtitle" data-i18n="cases.subtitle" data-animate="fade-up" data-animate-delay="100">お客様のビジネス変革を支援</p>
+
+            <div class="cases-grid">
+                <article class="case-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="case-category" data-i18n="cases.retail">小売・流通</div>
+                    <h3 class="case-title" data-i18n="cases.case1.title">大手小売業の需要予測</h3>
+                    <p class="case-description" data-i18n="cases.case1.description">AIによる需要予測で欠品率30%削減、廃棄ロス25%削減を実現</p>
+                    <div class="case-results">
+                        <div class="case-result">
+                            <span class="result-number" data-i18n="cases.case1.result1">30%</span>
+                            <span class="result-label" data-i18n="cases.case1.result1Label">欠品率削減</span>
+                        </div>
+                        <div class="case-result">
+                            <span class="result-number" data-i18n="cases.case1.result2">25%</span>
+                            <span class="result-label" data-i18n="cases.case1.result2Label">廃棄ロス削減</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="case-category" data-i18n="cases.finance">金融</div>
+                    <h3 class="case-title" data-i18n="cases.case2.title">銀行の与信審査自動化</h3>
+                    <p class="case-description" data-i18n="cases.case2.description">機械学習モデルで審査時間を80%短縮、精度98%を実現</p>
+                    <div class="case-results">
+                        <div class="case-result">
+                            <span class="result-number" data-i18n="cases.case2.result1">80%</span>
+                            <span class="result-label" data-i18n="cases.case2.result1Label">審査時間短縮</span>
+                        </div>
+                        <div class="case-result">
+                            <span class="result-number" data-i18n="cases.case2.result2">98%</span>
+                            <span class="result-label" data-i18n="cases.case2.result2Label">審査精度</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="case-category" data-i18n="cases.manufacturing">製造</div>
+                    <h3 class="case-title" data-i18n="cases.case3.title">製造業の予知保全</h3>
+                    <p class="case-description" data-i18n="cases.case3.description">IoTデータ分析で設備故障を予知、ダウンタイム70%削減</p>
+                    <div class="case-results">
+                        <div class="case-result">
+                            <span class="result-number" data-i18n="cases.case3.result1">70%</span>
+                            <span class="result-label" data-i18n="cases.case3.result1Label">ダウンタイム削減</span>
+                        </div>
+                        <div class="case-result">
+                            <span class="result-number" data-i18n="cases.case3.result2">40%</span>
+                            <span class="result-label" data-i18n="cases.case3.result2Label">メンテナンス費削減</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. チーム紹介 -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="team.title" data-animate="fade-up">チーム紹介</h2>
+            <p class="section-subtitle" data-i18n="team.subtitle" data-animate="fade-up" data-animate-delay="100">世界トップレベルの専門家たち</p>
+
+            <div class="team-grid">
+                <article class="team-member" data-animate="fade-up" data-animate-delay="200">
+                    <div class="member-image">
+                        <div class="placeholder-avatar">CEO</div>
+                    </div>
+                    <h3 class="member-name" data-i18n="team.ceo.name">山田 太郎</h3>
+                    <p class="member-role" data-i18n="team.ceo.role">代表取締役CEO</p>
+                    <p class="member-bio" data-i18n="team.ceo.bio">元Google AI研究員。東京大学工学部卒、スタンフォード大学博士。</p>
+                </article>
+
+                <article class="team-member" data-animate="fade-up" data-animate-delay="300">
+                    <div class="member-image">
+                        <div class="placeholder-avatar">CTO</div>
+                    </div>
+                    <h3 class="member-name" data-i18n="team.cto.name">佐藤 花子</h3>
+                    <p class="member-role" data-i18n="team.cto.role">CTO</p>
+                    <p class="member-bio" data-i18n="team.cto.bio">元Microsoftリードエンジニア。MITコンピュータサイエンス修士。</p>
+                </article>
+
+                <article class="team-member" data-animate="fade-up" data-animate-delay="400">
+                    <div class="member-image">
+                        <div class="placeholder-avatar">COO</div>
+                    </div>
+                    <h3 class="member-name" data-i18n="team.co.name">鈴木 一郎</h3>
+                    <p class="member-role" data-i18n="team.co.role">COO</p>
+                    <p class="member-bio" data-i18n="team.co.bio">外資系コンサル出身。早稲田大学商学部卒、MBA（ハーバード）。</p>
+                </article>
+
+                <article class="team-member" data-animate="fade-up" data-animate-delay="500">
+                    <div class="member-image">
+                        <div class="placeholder-avatar">AI Lead</div>
+                    </div>
+                    <h3 class="member-name" data-i18n="team.ai.name">田中 美咲</h3>
+                    <p class="member-role" data-i18n="team.ai.role">AI研究部門長</p>
+                    <p class="member-bio" data-i18n="team.ai.bio">DeepMind元研究員。東京大学理学部卒。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 採用情報 -->
+    <section id="careers" class="careers-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="careers.title" data-animate="fade-up">採用情報</h2>
+            <p class="section-subtitle" data-i18n="careers.subtitle" data-animate="fade-up" data-animate-delay="100">共にAIの未来を創る仲間を募集中</p>
+
+            <div class="careers-grid">
+                <article class="career-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="career-category" data-i18n="careers.engineering">エンジニアリング</div>
+                    <h3 class="career-title" data-i18n="careers.ml.title">機械学習エンジニア</h3>
+                    <ul class="career-requirements">
+                        <li data-i18n="careers.ml.req1">Python/TensorFlow/PyTorchの経験</li>
+                        <li data-i18n="careers.ml.req2">深層学習の実務経験</li>
+                        <li data-i18n="careers.ml.req3">論文読解力（英語）</li>
+                    </ul>
+                    <a href="#contact" class="career-link" data-i18n="careers.apply">応募する →</a>
+                </article>
+
+                <article class="career-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="career-category" data-i18n="careers.engineering">エンジニアリング</div>
+                    <h3 class="career-title" data-i18n="careers.backend.title">バックエンドエンジニア</h3>
+                    <ul class="career-requirements">
+                        <li data-i18n="careers.backend.req1">Python/Goの経験</li>
+                        <li data-i18n="careers.backend.req2">大規模分散システムの開発経験</li>
+                        <li data-i18n="careers.backend.req3">クラウド（AWS/GCP）の経験</li>
+                    </ul>
+                    <a href="#contact" class="career-link" data-i18n="careers.apply">応募する →</a>
+                </article>
+
+                <article class="career-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="career-category" data-i18n="careers.sales">営業・マーケティング</div>
+                    <h3 class="career-title" data-i18n="careers.sales.title">ソリューションセールス</h3>
+                    <ul class="career-requirements">
+                        <li data-i18n="careers.sales.req1">B2B営業経験3年以上</li>
+                        <li data-i18n="careers.sales.req2">SIer/ベンダー経験</li>
+                        <li data-i18n="careers.sales.req3">IT知識</li>
+                    </ul>
+                    <a href="#contact" class="career-link" data-i18n="careers.apply">応募する →</a>
+                </article>
+
+                <article class="career-card" data-animate="fade-up" data-animate-delay="500">
+                    <div class="career-category" data-i18n="careers.design">デザイン</div>
+                    <h3 class="career-title" data-i18n="careers.product.title">プロダクトデザイナー</h3>
+                    <ul class="career-requirements">
+                        <li data-i18n="careers.product.req1">UI/UXデザイン経験3年以上</li>
+                        <li data-i18n="careers.product.req2">Figma/Sketchの精通</li>
+                        <li data-i18n="careers.product.req3">データ製品のデザイン経験</li>
+                    </ul>
+                    <a href="#contact" class="career-link" data-i18n="careers.apply">応募する →</a>
+                </article>
+            </div>
+
+            <div class="careers-culture" data-animate="fade-up" data-animate-delay="600">
+                <h3 class="culture-title" data-i18n="careers.culture.title">企业文化</h3>
+                <ul class="culture-list">
+                    <li data-i18n="careers.culture.item1">完全リモートワーク可能</li>
+                    <li data-i18n="careers.culture.item2">フレックスタイム制（コアタイムなし）</li>
+                    <li data-i18n="careers.culture.item3">研究論文発表支援</li>
+                    <li data-i18n="careers.culture.item4">国際会議参加支援</li>
+                    <li data-i18n="careers.culture.item5">株式報酬制度</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ニュース・ブログ -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="news.title" data-animate="fade-up">ニュース・ブログ</h2>
+            <p class="section-subtitle" data-i18n="news.subtitle" data-animate="fade-up" data-animate-delay="100">最新のAIトレンドと会社の情報</p>
+
+            <div class="news-grid">
+                <article class="news-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="news-date">
+                        <time datetime="2024-01-15" data-i18n="news.article1.date">2024.01.15</time>
+                    </div>
+                    <div class="news-category" data-i18n="news.category.release">リリース</div>
+                    <h3 class="news-title" data-i18n="news.article1.title">「AI Platform v2.0」をリリース</h3>
+                    <p class="news-excerpt" data-i18n="news.article1.excerpt">自動ハイパーパラメータ最適化機能を追加し、モデル開発効率を3倍に向上</p>
+                    <a href="#" class="news-link" data-i18n="news.readMore">続きを読む →</a>
+                </article>
+
+                <article class="news-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="news-date">
+                        <time datetime="2024-01-10" data-i18n="news.article2.date">2024.01.10</time>
+                    </div>
+                    <div class="news-category" data-i18n="news.category.blog">ブログ</div>
+                    <h3 class="news-title" data-i18n="news.article2.title">LLMのビジネス活用における課題と解決策</h3>
+                    <p class="news-excerpt" data-i18n="news.article2.excerpt">大規模言語モデルを企業システムに導入する際のポイントを解説</p>
+                    <a href="#" class="news-link" data-i18n="news.readMore">続きを読む →</a>
+                </article>
+
+                <article class="news-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="news-date">
+                        <time datetime="2024-01-05" data-i18n="news.article3.date">2024.01.05</time>
+                    </div>
+                    <div class="news-category" data-i18n="news.category.event">イベント</div>
+                    <h3 class="news-title" data-i18n="news.article3.title">AIカンファレンス2024に出展</h3>
+                    <p class="news-excerpt" data-i18n="news.article3.excerpt">2月15日〜17日、東京ビッグサイトで弊社ブースに出展します</p>
+                    <a href="#" class="news-link" data-i18n="news.readMore">続きを読む →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. パートナー -->
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="partners.title" data-animate="fade-up">パートナー</h2>
+            <p class="section-subtitle" data-i18n="partners.subtitle" data-animate="fade-up" data-animate-delay="100">信頼できるパートナー企業と共に</p>
+
+            <div class="partners-grid">
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="200">
+                    <div class="placeholder-logo">Partner A</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="250">
+                    <div class="placeholder-logo">Partner B</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="300">
+                    <div class="placeholder-logo">Partner C</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="350">
+                    <div class="placeholder-logo">Partner D</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="400">
+                    <div class="placeholder-logo">Partner E</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="450">
+                    <div class="placeholder-logo">Partner F</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="500">
+                    <div class="placeholder-logo">Partner G</div>
+                </div>
+                <div class="partner-logo" data-animate="fade-up" data-animate-delay="550">
+                    <div class="placeholder-logo">Partner H</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. リソース -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="resources.title" data-animate="fade-up">リソース</h2>
+            <p class="section-subtitle" data-i18n="resources.subtitle" data-animate="fade-up" data-animate-delay="100">役立つ資料・ドキュメントをダウンロード</p>
+
+            <div class="resources-grid">
+                <article class="resource-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="resource-title" data-i18n="resources.whitepaper1.title">AI導入ガイドブック</h3>
+                    <p class="resource-description" data-i18n="resources.whitepaper1.description">AI導入の第一步から成功事例までを網羅したガイド</p>
+                    <a href="#" class="resource-link" data-i18n="resources.download">ダウンロード（PDF）</a>
+                </article>
+
+                <article class="resource-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3 class="resource-title" data-i18n="resources.whitepaper2.title">業界別AI活用事例集</h3>
+                    <p class="resource-description" data-i18n="resources.whitepaper2.description">製造・金融・小売など12業界の導入事例を紹介</p>
+                    <a href="#" class="resource-link" data-i18n="resources.download">ダウンロード（PDF）</a>
+                </article>
+
+                <article class="resource-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="resource-title" data-i18n="resources.doc.title">APIドキュメント</h3>
+                    <p class="resource-description" data-i18n="resources.doc.description">AI PlatformのAPI仕様と実装例</p>
+                    <a href="#" class="resource-link" data-i18n="resources.view">ドキュメントを見る</a>
+                </article>
+
+                <article class="resource-card" data-animate="fade-up" data-animate-delay="500">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="resource-title" data-i18n="resources.video.title">製品デモ動画</h3>
+                    <p class="resource-description" data-i18n="resources.video.description">各製品の使い方を紹介する動画チュートリアル</p>
+                    <a href="#" class="resource-link" data-i18n="resources.watch">動画を見る</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq.title" data-animate="fade-up">よくある質問</h2>
+
+            <div class="faq-list">
+                <details class="faq-item" data-animate="fade-up" data-animate-delay="100">
+                    <summary class="faq-question" data-i18n="faq.q1.question">どのような業界の企業を支援していますか？</summary>
+                    <p class="faq-answer" data-i18n="faq.q1.answer">製造、金融、小売、医療、物流など、幅広い業界のお客様を支援しています。業界を問わず、データを活用した業務改善や新規事業創出をご希望のお客様にご対応可能です。</p>
+                </details>
+
+                <details class="faq-item" data-animate="fade-up" data-animate-delay="200">
+                    <summary class="faq-question" data-i18n="faq.q2.question">AI導入までにどのくらいの期間がかかりますか？</summary>
+                    <p class="faq-answer" data-i18n="faq.q2.answer">プロジェクトの規模によりますが、小規模なPoC（概念実証）で1〜2ヶ月、本格導入で3〜6ヶ月程度が一般的です。まずは無料相談で貴社の状況をヒアリングさせてください。</p>
+                </details>
+
+                <details class="faq-item" data-animate="fade-up" data-animate-delay="300">
+                    <summary class="faq-question" data-i18n="faq.q3.question">費用の目安を教えてください</summary>
+                    <p class="faq-answer" data-i18n="faq.q3.answer">プロジェクトの内容や規模によりますが、月額50万円〜の導入実績がございます。まずはご要望をお聞かせいただければ、お見積もりを作成いたします。</p>
+                </details>
+
+                <details class="faq-item" data-animate="fade-up" data-animate-delay="400">
+                    <summary class="faq-question" data-i18n="faq.q4.question">導入後のサポート体制はありますか？</summary>
+                    <p class="faq-answer" data-i18n="faq.q4.answer">はい、導入後も継続的なサポートをご提供しています。24時間365日の監視、月次レポート、モデルの再学習など、お客様の事業継続を全力で支援します。</p>
+                </details>
+
+                <details class="faq-item" data-animate="fade-up" data-animate-delay="500">
+                    <summary class="faq-question" data-i18n="faq.q5.question">データセキュリティはどのように対応していますか？</summary>
+                    <p class="faq-answer" data-i18n="faq.q5.answer">ISO27001の認証を取得しており、厳格なセキュリティ管理体制を整えています。データの暗号化、アクセス制御、定期的なセキュリティ監査を実施し、お客様のデータを保護します。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. お問い合わせ -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title" data-i18n="contact.title" data-animate="fade-up">お問い合わせ</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle" data-animate="fade-up" data-animate-delay="100">AI導入のご相談・お見積もりはお気軽に</p>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right" data-animate-delay="200">
+                    <h3 class="contact-info-title" data-i18n="contact.info.title">連絡先</h3>
+                    <dl class="contact-details">
+                        <div class="contact-item">
+                            <dt><i class="fas fa-phone"></i></dt>
+                            <dd data-i18n="contact.phone">03-1234-5678</dd>
+                        </div>
+                        <div class="contact-item">
+                            <dt><i class="fas fa-envelope"></i></dt>
+                            <dd data-i18n="contact.email">contact@ai-corp.example.com</dd>
+                        </div>
+                        <div class="contact-item">
+                            <dt><i class="fas fa-map-marker-alt"></i></dt>
+                            <dd data-i18n="contact.address">東京都渋谷区神宮前1-2-3 AIビル10F</dd>
+                        </div>
+                        <div class="contact-item">
+                            <dt><i class="fas fa-clock"></i></dt>
+                            <dd data-i18n="contact.hours">平日 9:00-18:00</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <form class="contact-form" action="#" method="POST" data-animate="fade-left" data-animate-delay="300">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-i18n="contact.form.name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company" class="form-label" data-i18n="contact.form.company">会社名</label>
+                        <input type="text" id="company" name="company" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label" data-i18n="contact.form.email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label" data-i18n="contact.form.phone">電話番号</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-type" class="form-label" data-i18n="contact.form.inquiryType">お問い合わせ内容</label>
+                        <select id="inquiry-type" name="inquiry-type" class="form-select">
+                            <option value="" data-i18n="contact.form.selectDefault">選択してください</option>
+                            <option value="consulting" data-i18n="contact.form.type1">AI導入コンサルティング</option>
+                            <option value="product" data-i18n="contact.form.type2">製品に関するお問い合わせ</option>
+                            <option value="price" data-i18n="contact.form.type3">お見積もり</option>
+                            <option value="support" data-i18n="contact.form.type4">技術サポート</option>
+                            <option value="other" data-i18n="contact.form.type5">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label" data-i18n="contact.form.message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-privacy">
+                        <label class="privacy-label">
+                            <input type="checkbox" name="privacy" required>
+                            <span data-i18n="contact.form.privacy">プライバシーポリシーに同意する</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit" data-i18n="contact.form.submit">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- 13. フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section" data-animate="fade-up" data-animate-delay="100">
+                    <h3 class="footer-title" data-i18n="footer.about">会社概要</h3>
+                    <nav class="footer-nav">
+                        <ul class="footer-links">
+                            <li><a href="#company" data-i18n="footer.aboutCompany">会社情報</a></li>
+                            <li><a href="#team" data-i18n="footer.team">チーム</a></li>
+                            <li><a href="#careers" data-i18n="footer.careers">採用情報</a></li>
+                            <li><a href="#news" data-i18n="footer.news">ニュース</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section" data-animate="fade-up" data-animate-delay="200">
+                    <h3 class="footer-title" data-i18n="footer.services">サービス</h3>
+                    <nav class="footer-nav">
+                        <ul class="footer-links">
+                            <li><a href="#services" data-i18n="footer.consulting">AIコンサルティング</a></li>
+                            <li><a href="#products" data-i18n="footer.products">製品</a></li>
+                            <li><a href="#resources" data-i18n="footer.resources">リソース</a></li>
+                            <li><a href="#faq" data-i18n="footer.faq">FAQ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section" data-animate="fade-up" data-animate-delay="300">
+                    <h3 class="footer-title" data-i18n="footer.support">サポート</h3>
+                    <nav class="footer-nav">
+                        <ul class="footer-links">
+                            <li><a href="#contact" data-i18n="footer.contact">お問い合わせ</a></li>
+                            <li><a href="#" data-i18n="footer.documentation">ドキュメント</a></li>
+                            <li><a href="#" data-i18n="footer.developer">開発者向け</a></li>
+                            <li><a href="#" data-i18n="footer.status">システムステータス</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section" data-animate="fade-up" data-animate-delay="400">
+                    <h3 class="footer-title" data-i18n="footer.follow">フォローする</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <img src="assets/icons/twitter.svg" alt="Twitter" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <img src="assets/icons/github.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom" data-animate="fade-up" data-animate-delay="500">
+                <div class="footer-legal">
+                    <a href="#" data-i18n="footer.privacy">プライバシーポリシー</a>
+                    <span class="separator">|</span>
+                    <a href="#" data-i18n="footer.terms">利用規約</a>
+                    <span class="separator">|</span>
+                    <a href="#" data-i18n="footer.sitemap">サイトマップ</a>
+                </div>
+                <p class="footer-copyright" data-i18n="footer.copyright">&copy; 2024 AI Corp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

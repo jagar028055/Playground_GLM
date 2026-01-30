@@ -1,0 +1,299 @@
+{
+  "site": {
+    "title": "AI Corp - 人工知能でビジネスを変革"
+  },
+  "hero": {
+    "title": "人工知能で<br>ビジネスの未来を切り拓く",
+    "subtitle": "最先端のAI技術とデータ分析で、<br>あなたのビジネスを次のステージへ",
+    "contact": "お問い合わせ",
+    "services": "サービスを見る"
+  },
+  "services": {
+    "title": "サービス概要",
+    "subtitle": "AI・データ分析ソリューションでビジネス課題を解決",
+    "ai": {
+      "title": "AIコンサルティング",
+      "description": "ビジネス課題に最適なAIソリューションを設計・提案"
+    },
+    "data": {
+      "title": "データ分析",
+      "description": "ビッグデータを活用した高度な分析・予測モデル構築"
+    },
+    "automation": {
+      "title": "業務自動化",
+      "description": "AI・RPAによる業務プロセスの効率化・自動化"
+    },
+    "custom": {
+      "title": "カスタムAI開発",
+      "description": "お客様のニーズに合わせた独自AIシステムの開発"
+    }
+  },
+  "products": {
+    "title": "製品紹介",
+    "subtitle": "最先端のAI製品ラインナップ",
+    "learnMore": "詳しく見る →",
+    "platform": {
+      "title": "AI Platform",
+      "description": "機械学習モデルの開発・運用を一元管理する統合プラットフォーム",
+      "feature1": "ノーコードモデル開発",
+      "feature2": "自動モデル最適化",
+      "feature3": "リアルタイム推論API"
+    },
+    "analytics": {
+      "title": "Analytics Pro",
+      "description": "高度なデータ分析と可視化を実現する次世代ツール",
+      "feature1": "インタラクティブダッシュボード",
+      "feature2": "予測分析",
+      "feature3": "自然言語クエリ"
+    },
+    "automl": {
+      "title": "AutoML Suite",
+      "description": "専門知識がなくても高精度なAIモデルを作成できる自動化ツール",
+      "feature1": "自動特徴量エンジニアリング",
+      "feature2": "モデル自動選定",
+      "feature3": "ワンクリックデプロイ"
+    }
+  },
+  "company": {
+    "title": "会社概要",
+    "vision": {
+      "title": "ビジョン",
+      "text": "AI技術を通じて、社会のあらゆる課題を解決し、<br>持続可能な未来を創造する"
+    },
+    "mission": {
+      "title": "ミッション",
+      "text": "最先端のAI技術をあらゆる企業に届け、<br>ビジネスの可能性を広げる"
+    },
+    "name": "会社名",
+    "nameValue": "AI株式会社",
+    "founded": "設立",
+    "foundedValue": "2020年4月1日",
+    "capital": "資本金",
+    "capitalValue": "5億円",
+    "ceo": "代表取締役CEO",
+    "ceoValue": "山田 太郎",
+    "employees": "従業員数",
+    "employeesValue": "150名",
+    "location": "本社所在地",
+    "locationValue": "東京都渋谷区神宮前1-2-3"
+  },
+  "cases": {
+    "title": "実績・ケーススタディ",
+    "subtitle": "お客様のビジネス変革を支援",
+    "retail": "小売・流通",
+    "finance": "金融",
+    "manufacturing": "製造",
+    "case1": {
+      "title": "大手小売業の需要予測",
+      "description": "AIによる需要予測で欠品率30%削減、廃棄ロス25%削減を実現",
+      "result1": "30%",
+      "result1Label": "欠品率削減",
+      "result2": "25%",
+      "result2Label": "廃棄ロス削減"
+    },
+    "case2": {
+      "title": "銀行の与信審査自動化",
+      "description": "機械学習モデルで審査時間を80%短縮、精度98%を実現",
+      "result1": "80%",
+      "result1Label": "審査時間短縮",
+      "result2": "98%",
+      "result2Label": "審査精度"
+    },
+    "case3": {
+      "title": "製造業の予知保全",
+      "description": "IoTデータ分析で設備故障を予知、ダウンタイム70%削減",
+      "result1": "70%",
+      "result1Label": "ダウンタイム削減",
+      "result2": "40%",
+      "result2Label": "メンテナンス費削減"
+    }
+  },
+  "team": {
+    "title": "チーム紹介",
+    "subtitle": "世界トップレベルの専門家たち",
+    "ceo": {
+      "name": "山田 太郎",
+      "role": "代表取締役CEO",
+      "bio": "元Google AI研究員。東京大学工学部卒、スタンフォード大学博士。"
+    },
+    "cto": {
+      "name": "佐藤 花子",
+      "role": "CTO",
+      "bio": "元Microsoftリードエンジニア。MITコンピュータサイエンス修士。"
+    },
+    "co": {
+      "name": "鈴木 一郎",
+      "role": "COO",
+      "bio": "外資系コンサル出身。早稲田大学商学部卒、MBA（ハーバード）。"
+    },
+    "ai": {
+      "name": "田中 美咲",
+      "role": "AI研究部門長",
+      "bio": "DeepMind元研究員。東京大学理学部卒。"
+    }
+  },
+  "careers": {
+    "title": "採用情報",
+    "subtitle": "共にAIの未来を創る仲間を募集中",
+    "engineering": "エンジニアリング",
+    "sales": "営業・マーケティング",
+    "design": "デザイン",
+    "ml": {
+      "title": "機械学習エンジニア",
+      "req1": "Python/TensorFlow/PyTorchの経験",
+      "req2": "深層学習の実務経験",
+      "req3": "論文読解力（英語）"
+    },
+    "backend": {
+      "title": "バックエンドエンジニア",
+      "req1": "Python/Goの経験",
+      "req2": "大規模分散システムの開発経験",
+      "req3": "クラウド（AWS/GCP）の経験"
+    },
+    "sales": {
+      "title": "ソリューションセールス",
+      "req1": "B2B営業経験3年以上",
+      "req2": "SIer/ベンダー経験",
+      "req3": "IT知識"
+    },
+    "product": {
+      "title": "プロダクトデザイナー",
+      "req1": "UI/UXデザイン経験3年以上",
+      "req2": "Figma/Sketchの精通",
+      "req3": "データ製品のデザイン経験"
+    },
+    "apply": "応募する →",
+    "culture": {
+      "title": "企业文化",
+      "item1": "完全リモートワーク可能",
+      "item2": "フレックスタイム制（コアタイムなし）",
+      "item3": "研究論文発表支援",
+      "item4": "国際会議参加支援",
+      "item5": "株式報酬制度"
+    }
+  },
+  "news": {
+    "title": "ニュース・ブログ",
+    "subtitle": "最新のAIトレンドと会社の情報",
+    "readMore": "続きを読む →",
+    "category": {
+      "release": "リリース",
+      "blog": "ブログ",
+      "event": "イベント"
+    },
+    "article1": {
+      "date": "2024.01.15",
+      "title": "「AI Platform v2.0」をリリース",
+      "excerpt": "自動ハイパーパラメータ最適化機能を追加し、モデル開発効率を3倍に向上"
+    },
+    "article2": {
+      "date": "2024.01.10",
+      "title": "LLMのビジネス活用における課題と解決策",
+      "excerpt": "大規模言語モデルを企業システムに導入する際のポイントを解説"
+    },
+    "article3": {
+      "date": "2024.01.05",
+      "title": "AIカンファレンス2024に出展",
+      "excerpt": "2月15日〜17日、東京ビッグサイトで弊社ブースに出展します"
+    }
+  },
+  "partners": {
+    "title": "パートナー",
+    "subtitle": "信頼できるパートナー企業と共に"
+  },
+  "resources": {
+    "title": "リソース",
+    "subtitle": "役立つ資料・ドキュメントをダウンロード",
+    "download": "ダウンロード（PDF）",
+    "view": "ドキュメントを見る",
+    "watch": "動画を見る",
+    "whitepaper1": {
+      "title": "AI導入ガイドブック",
+      "description": "AI導入の第一步から成功事例までを網羅したガイド"
+    },
+    "whitepaper2": {
+      "title": "業界別AI活用事例集",
+      "description": "製造・金融・小売など12業界の導入事例を紹介"
+    },
+    "doc": {
+      "title": "APIドキュメント",
+      "description": "AI PlatformのAPI仕様と実装例"
+    },
+    "video": {
+      "title": "製品デモ動画",
+      "description": "各製品の機能と使い方を紹介する動画チュートリアル"
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "q1": {
+      "question": "どのような業界の企業を支援していますか？",
+      "answer": "製造、金融、小売、医療、物流など、幅広い業界のお客様を支援しています。業界を問わず、データを活用した業務改善や新規事業創出をご希望のお客様にご対応可能です。"
+    },
+    "q2": {
+      "question": "AI導入までにどのくらいの期間がかかりますか？",
+      "answer": "プロジェクトの規模によりますが、小規模なPoC（概念実証）で1〜2ヶ月、本格導入で3〜6ヶ月程度が一般的です。まずは無料相談で貴社の状況をヒアリングさせてください。"
+    },
+    "q3": {
+      "question": "費用の目安を教えてください",
+      "answer": "プロジェクトの内容や規模によりますが、月額50万円〜の導入実績がございます。まずはご要望をお聞かせいただければ、お見積もりを作成いたします。"
+    },
+    "q4": {
+      "question": "導入後のサポート体制はありますか？",
+      "answer": "はい、導入後も継続的なサポートをご提供しています。24時間365日の監視、月次レポート、モデルの再学習など、お客様の事業継続を全力で支援します。"
+    },
+    "q5": {
+      "question": "データセキュリティはどのように対応していますか？",
+      "answer": "ISO27001の認証を取得しており、厳格なセキュリティ管理体制を整えています。データの暗号化、アクセス制御、定期的なセキュリティ監査を実施し、お客様のデータを保護します。"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "AI導入のご相談・お見積もりはお気軽に",
+    "info": {
+      "title": "連絡先",
+      "phone": "03-1234-5678",
+      "email": "contact@ai-corp.example.com",
+      "address": "東京都渋谷区神宮前1-2-3 AIビル10F",
+      "hours": "平日 9:00-18:00"
+    },
+    "form": {
+      "name": "お名前",
+      "company": "会社名",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "inquiryType": "お問い合わせ内容",
+      "selectDefault": "選択してください",
+      "type1": "AI導入コンサルティング",
+      "type2": "製品に関するお問い合わせ",
+      "type3": "お見積もり",
+      "type4": "技術サポート",
+      "type5": "その他",
+      "message": "お問い合わせ内容",
+      "privacy": "プライバシーポリシーに同意する",
+      "submit": "送信する"
+    }
+  },
+  "footer": {
+    "about": "会社概要",
+    "aboutCompany": "会社情報",
+    "team": "チーム",
+    "careers": "採用情報",
+    "news": "ニュース",
+    "services": "サービス",
+    "consulting": "AIコンサルティング",
+    "products": "製品",
+    "resources": "リソース",
+    "faq": "FAQ",
+    "support": "サポート",
+    "contact": "お問い合わせ",
+    "documentation": "ドキュメント",
+    "developer": "開発者向け",
+    "status": "システムステータス",
+    "follow": "フォローする",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "sitemap": "サイトマップ",
+    "copyright": "© 2024 AI Corp. All rights reserved."
+  }
+}
