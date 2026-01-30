@@ -1,0 +1,299 @@
+{
+  "site": {
+    "title": "AI Corp - Transforming Business with AI"
+  },
+  "hero": {
+    "title": "Pioneering the Future of<br>Business with Artificial Intelligence",
+    "subtitle": "Cutting-edge AI technology and data analytics<br>propel your business to the next stage",
+    "contact": "Contact Us",
+    "services": "View Services"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "AI & Data Analytics Solutions to Solve Business Challenges",
+    "ai": {
+      "title": "AI Consulting",
+      "description": "Designing and proposing optimal AI solutions for business challenges"
+    },
+    "data": {
+      "title": "Data Analytics",
+      "description": "Advanced analytics and predictive modeling leveraging big data"
+    },
+    "automation": {
+      "title": "Business Automation",
+      "description": "Efficiency and automation of business processes with AI & RPA"
+    },
+    "custom": {
+      "title": "Custom AI Development",
+      "description": "Developing proprietary AI systems tailored to customer needs"
+    }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Cutting-edge AI Product Lineup",
+    "learnMore": "Learn More →",
+    "platform": {
+      "title": "AI Platform",
+      "description": "Integrated platform for centralized management of ML model development and operations",
+      "feature1": "No-code model development",
+      "feature2": "Automated model optimization",
+      "feature3": "Real-time inference API"
+    },
+    "analytics": {
+      "title": "Analytics Pro",
+      "description": "Next-generation tool realizing advanced data analytics and visualization",
+      "feature1": "Interactive dashboard",
+      "feature2": "Predictive analytics",
+      "feature3": "Natural language query"
+    },
+    "automl": {
+      "title": "AutoML Suite",
+      "description": "Automation tool enabling high-accuracy AI model creation without expertise",
+      "feature1": "Automated feature engineering",
+      "feature2": "Automated model selection",
+      "feature3": "One-click deployment"
+    }
+  },
+  "company": {
+    "title": "Company",
+    "vision": {
+      "title": "Vision",
+      "text": "Solving all social challenges through AI technology,<br>creating a sustainable future"
+    },
+    "mission": {
+      "title": "Mission",
+      "text": "Delivering cutting-edge AI technology to all enterprises,<br>expanding business possibilities"
+    },
+    "name": "Company Name",
+    "nameValue": "AI Corp.",
+    "founded": "Founded",
+    "foundedValue": "April 1, 2020",
+    "capital": "Capital",
+    "capitalValue": "500 million JPY",
+    "ceo": "CEO",
+    "ceoValue": "Yamada Taro",
+    "employees": "Employees",
+    "employeesValue": "150",
+    "location": "Headquarters",
+    "locationValue": "1-2-3 Jingumae, Shibuya-ku, Tokyo"
+  },
+  "cases": {
+    "title": "Success Stories",
+    "subtitle": "Supporting Customer Business Transformation",
+    "retail": "Retail & Distribution",
+    "finance": "Finance",
+    "manufacturing": "Manufacturing",
+    "case1": {
+      "title": "Demand Forecasting for Major Retailer",
+      "description": "AI-powered demand forecasting achieved 30% reduction in stockouts and 25% reduction in waste loss",
+      "result1": "30%",
+      "result1Label": "Stockout Reduction",
+      "result2": "25%",
+      "result2Label": "Waste Loss Reduction"
+    },
+    "case2": {
+      "title": "Credit Screening Automation for Bank",
+      "description": "ML model achieved 80% reduction in screening time with 98% accuracy",
+      "result1": "80%",
+      "result1Label": "Screening Time Reduction",
+      "result2": "98%",
+      "result2Label": "Screening Accuracy"
+    },
+    "case3": {
+      "title": "Predictive Maintenance for Manufacturing",
+      "description": "IoT data analytics predicts equipment failures, reducing downtime by 70%",
+      "result1": "70%",
+      "result1Label": "Downtime Reduction",
+      "result2": "40%",
+      "result2Label": "Maintenance Cost Reduction"
+    }
+  },
+  "team": {
+    "title": "Team",
+    "subtitle": "World-Class Experts",
+    "ceo": {
+      "name": "Yamada Taro",
+      "role": "CEO",
+      "bio": "Former Google AI Researcher. PhD from Stanford University, B.Eng from University of Tokyo."
+    },
+    "cto": {
+      "name": "Sato Hanako",
+      "role": "CTO",
+      "bio": "Former Microsoft Lead Engineer. MSc in Computer Science from MIT."
+    },
+    "co": {
+      "name": "Suzuki Ichiro",
+      "role": "COO",
+      "bio": "Former foreign consulting firm. MBA from Harvard, B.Com from Waseda University."
+    },
+    "ai": {
+      "name": "Tanaka Misaki",
+      "role": "Head of AI Research",
+      "bio": "Former DeepMind Researcher. B.Sci from University of Tokyo."
+    }
+  },
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join Us in Creating the AI Future",
+    "engineering": "Engineering",
+    "sales": "Sales & Marketing",
+    "design": "Design",
+    "ml": {
+      "title": "Machine Learning Engineer",
+      "req1": "Experience with Python/TensorFlow/PyTorch",
+      "req2": "Practical experience in deep learning",
+      "req3": "Ability to read research papers (English)"
+    },
+    "backend": {
+      "title": "Backend Engineer",
+      "req1": "Experience with Python/Go",
+      "req2": "Experience developing large-scale distributed systems",
+      "req3": "Experience with cloud (AWS/GCP)"
+    },
+    "sales": {
+      "title": "Solution Sales",
+      "req1": "3+ years B2B sales experience",
+      "req2": "SIer/vendor experience",
+      "req3": "IT knowledge"
+    },
+    "product": {
+      "title": "Product Designer",
+      "req1": "3+ years UI/UX design experience",
+      "req2": "Proficiency in Figma/Sketch",
+      "req3": "Experience designing data products"
+    },
+    "apply": "Apply Now →",
+    "culture": {
+      "title": "Company Culture",
+      "item1": "Fully remote work available",
+      "item2": "Flex time (no core hours)",
+      "item3": "Research paper publication support",
+      "item4": "International conference participation support",
+      "item5": "Stock option program"
+    }
+  },
+  "news": {
+    "title": "News & Blog",
+    "subtitle": "Latest AI Trends and Company Updates",
+    "readMore": "Read More →",
+    "category": {
+      "release": "Release",
+      "blog": "Blog",
+      "event": "Event"
+    },
+    "article1": {
+      "date": "2024.01.15",
+      "title": "Release of AI Platform v2.0",
+      "excerpt": "Added automated hyperparameter optimization, improving model development efficiency by 3x"
+    },
+    "article2": {
+      "date": "2024.01.10",
+      "title": "Challenges and Solutions in LLM Business Application",
+      "excerpt": "Explaining key points for introducing large language models into enterprise systems"
+    },
+    "article3": {
+      "date": "2024.01.05",
+      "title": "Exhibiting at AI Conference 2024",
+      "excerpt": "We will be exhibiting at our booth at Tokyo Big Sight from Feb 15-17"
+    }
+  },
+  "partners": {
+    "title": "Partners",
+    "subtitle": "Together with Trusted Partner Companies"
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Download Useful Materials and Documentation",
+    "download": "Download (PDF)",
+    "view": "View Documentation",
+    "watch": "Watch Video",
+    "whitepaper1": {
+      "title": "AI Implementation Guide",
+      "description": "Comprehensive guide covering first steps to success stories of AI implementation"
+    },
+    "whitepaper2": {
+      "title": "Industry-Specific AI Use Cases",
+      "description": "Introduction to implementation cases across 12 industries including manufacturing, finance, and retail"
+    },
+    "doc": {
+      "title": "API Documentation",
+      "description": "AI Platform API specifications and implementation examples"
+    },
+    "video": {
+      "title": "Product Demo Videos",
+      "description": "Video tutorials introducing features and usage of each product"
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": {
+      "question": "What industries do you support?",
+      "answer": "We support customers across a wide range of industries including manufacturing, finance, retail, healthcare, and logistics. Regardless of industry, we can assist any customer seeking to improve operations or create new businesses through data utilization."
+    },
+    "q2": {
+      "question": "How long does AI implementation take?",
+      "answer": "Depending on project scale, typically 1-2 months for small PoC (Proof of Concept) and 3-6 months for full implementation. Let's start with a free consultation to understand your specific situation."
+    },
+    "q3": {
+      "question": "What is the estimated cost?",
+      "answer": "Costs vary based on project content and scale, with implementations starting from 500,000 JPY/month. Share your requirements with us and we'll prepare a quotation."
+    },
+    "q4": {
+      "question": "What post-implementation support do you offer?",
+      "answer": "Yes, we provide continuous support after implementation. This includes 24/7 monitoring, monthly reports, model retraining, and full support for business continuity."
+    },
+    "q5": {
+      "question": "How do you handle data security?",
+      "answer": "We are ISO27001 certified with strict security management protocols. We implement data encryption, access controls, and regular security audits to protect customer data."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Feel Free to Consult About AI Implementation",
+    "info": {
+      "title": "Contact Information",
+      "phone": "03-1234-5678",
+      "email": "contact@ai-corp.example.com",
+      "address": "AI Building 10F, 1-2-3 Jingumae, Shibuya-ku, Tokyo",
+      "hours": "Weekdays 9:00-18:00"
+    },
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "inquiryType": "Inquiry Type",
+      "selectDefault": "Please select",
+      "type1": "AI Consulting",
+      "type2": "Product Inquiry",
+      "type3": "Quotation",
+      "type4": "Technical Support",
+      "type5": "Other",
+      "message": "Message",
+      "privacy": "I agree to the Privacy Policy",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "aboutCompany": "Company Info",
+    "team": "Team",
+    "careers": "Careers",
+    "news": "News",
+    "services": "Services",
+    "consulting": "AI Consulting",
+    "products": "Products",
+    "resources": "Resources",
+    "faq": "FAQ",
+    "support": "Support",
+    "contact": "Contact",
+    "documentation": "Documentation",
+    "developer": "Developer",
+    "status": "System Status",
+    "follow": "Follow Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "sitemap": "Sitemap",
+    "copyright": "© 2024 AI Corp. All rights reserved."
+  }
+}
