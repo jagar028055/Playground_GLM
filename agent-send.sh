@@ -61,19 +61,21 @@ log_send() {
 send_message() {
     local target="$1"
     local message="$2"
+
+    # 末尾の改行は送信のEnterと衝突しやすいので削除
+    message="${message%$'\n'}"
     
     echo "📤 送信中: $target ← '$message'"
     
-    # Claude Codeのプロンプトを一度クリア
-    tmux send-keys -t "$target" C-c
-    sleep 0.3
-    
-    # メッセージ送信
-    tmux send-keys -t "$target" "$message"
+    # メッセージ送信（paste-bufferで安定化）
+    tmux set-buffer -- "$message"
+    tmux paste-buffer -t "$target"
     sleep 0.1
-    
-    # エンター押下
-    tmux send-keys -t "$target" C-m
+
+    # エンター押下（1回目が無視される環境に備えて2回送る）
+    tmux send-keys -t "$target" Enter
+    sleep 0.1
+    tmux send-keys -t "$target" Enter
     sleep 0.5
 }
 
