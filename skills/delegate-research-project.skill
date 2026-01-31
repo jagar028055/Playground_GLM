@@ -1,0 +1,64 @@
+# delegate-research-project
+
+## Description
+Presidentがboss1に研究・分析プロジェクトを委任するためのSkill。boss1がWorkersを適切に管理し、並行作業で効率的にプロジェクトを完了するための指示を含みます。
+
+## Usage
+```
+/delegate-research-project [project_name] [deadline] [requirements]
+```
+
+## Parameters
+- **project_name**: プロジェクト名（例: "Microsoft投資分析"）
+- **deadline**: 納期（例: "2026/01/31 13:00"）
+- **requirements**: 要件（複数行可）
+
+## Output
+boss1へのメッセージが送信され、Workersによる並行作業が開始されます。
+
+## Template
+```
+あなたはboss1です。
+
+【タスク】{project_name}
+【納期】{deadline}
+【作業ディレクトリ】/workspace/{project_slug}/
+
+【成果物】
+- 投資家向け詳細分析レポート
+- プレゼンテーションスライド
+- 財務データセット
+- テクニカル分析チャート
+- 投資判断根拠ドキュメント
+
+【必須要件】
+- 最新情報の反映
+- 複数の情報ソースでクロスチェック
+- 具体的な数値根拠
+- 明確な投資判断と売買シグナル
+
+【成功基準】
+- プロフェッショナルな品質
+- 分析の根拠が明確
+- 具体的なアクションプラン
+
+【リソース】
+- Worker1: 調査・データ収集担当
+- Worker2: 執筆担当
+- Worker3: チャート・データ作成担当
+
+30分以内に実行計画を報告してください。
+```
+
+## Examples
+```
+/delegate-research-project "Microsoft投資分析" "2026/01/31 13:00" "最新の決算情報を含む投資家向けレポート作成"
+
+/delegate-research-project "Apple四半期分析" "2026/02/15 18:00" "Q4決算分析と競合比較"
+```
+
+## Best Practices
+1. 明確な納期と成果物を指定する
+2. 品質基準を明確にする
+3. Workersの役割分担を明示する
+4. 30分ごとの進捗報告を求める

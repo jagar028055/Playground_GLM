@@ -1,0 +1,59 @@
+# check-project-status
+
+## Description
+現在進行中のプロジェクトのステータスを確認するためのSkill。
+
+## Usage
+```
+/check-project-status
+```
+
+## Output
+プロジェクトの進捗状況、Workersの状態、次のマイルストーンが表示されます。
+
+## Template
+```bash
+# プロジェクトステータス確認スクリプト
+cat > /tmp/check_status.sh << 'EOF'
+#!/bin/bash
+
+echo "=== プロジェクトステータス $(date) ==="
+
+# 最新の進捗ファイルを確認
+if [ -f /workspace/*/progress.log ]; then
+    tail -20 /workspace/*/progress/log
+fi
+
+# Workersの状態を確認
+for worker in worker1 worker2 worker3; do
+    if [ -f /tmp/${worker}_done.txt ]; then
+        echo "✅ $worker: 完了"
+    else
+        echo "🔄 $worker: 進行中"
+    fi
+done
+
+# 次のマイルストーンを表示
+echo ""
+echo "=== 次のマイルストーン ==="
+echo "納期: [設定された納期]"
+echo "残り時間: [計算]"
+
+EOF
+
+chmod +x /tmp/check_status.sh
+/tmp/check_status.sh
+```
+
+## Status Indicators
+- ✅ 完了
+- 🔄 進行中
+- ⏳ 待機中
+- 🔴 ブロッカー
+- ⚠️ 要注意
+
+## Use Cases
+1. 定期的な進捗確認（30分ごと）
+2. Presidentからのステータス問い合わせ
+3. ボトルネック検出
+4. 納期遅延リスク評価

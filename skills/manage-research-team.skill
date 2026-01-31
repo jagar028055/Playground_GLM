@@ -1,0 +1,143 @@
+# manage-research-team
+
+## Description
+boss1が研究・分析プロジェクトをWorkersに割り当て、並行作業を管理するためのSkill。
+
+## Usage
+```
+/manage-research-team [project_name] [deadline]
+```
+
+## Parameters
+- **project_name**: プロジェクト名
+- **deadline**: 納期
+
+## Task Assignment Flow
+
+### Phase 1: Worker1（調査担当）
+```
+./agent-send.sh worker1 "あなたはworker1です。
+
+【作業ディレクトリ】/workspace/{project_slug}/
+
+【タスク】最新情報の収集・クロスチェック
+【納期】{data_collection_deadline}
+
+【成果物】
+- latest-earnings.md（最新決算）
+- competitor-analysis.md（競合分析）
+- analyst-ratings.md（アナリスト評価）
+- market-data.md（市場データ）
+
+【要件】
+- 複数ソースでクロスチェック
+- 全てのデータにソース明記
+- 数値の正確性を最優先
+
+30分ごとに進捗を報告してください。"
+```
+
+### Phase 2: Worker2（執筆担当）
+```
+./agent-send.sh worker2 "あなたはworker2です。
+
+【作業ディレクトリ】/workspace/{project_slug}/
+
+【タスク】詳細分析レポートの執筆
+【納期】{writing_deadline}
+
+【成果物】
+- investment-analysis-report.md
+
+【要件】
+- Worker1のデータを活用
+- 具体的な投資判断
+- 明確な売買シグナル
+- 数的根拠を全て明記
+
+1時間後にドラフト版を提出してください。"
+```
+
+### Phase 3: Worker3（チャート担当）
+```
+./agent-send.sh worker3 "あなたはworker3です。
+
+【作業ディレクトリ】/workspace/{project_slug}/
+
+【タスク】チャート・データ作成
+【納期】{chart_deadline}
+
+【成果物】
+- financial-dataset.csv
+- technical-analysis.md
+- competitor-comparison.md
+
+【要件】
+- Worker1のデータを使用
+- 視覚的に分かりやすい
+- テクニカル指標の詳細
+
+45分後に構成案を提出してください。"
+```
+
+## Quality Control
+
+### Data Verification
+```
+【データ相違解決】
+Worker1のデータを採用（複数ソースでクロスチェック済み）
+理由:
+- 複数ソースで一致
+- ソース明記あり
+- データの一貫性
+```
+
+### Progress Monitoring
+```
+15分ごとの進捗確認：
+- Worker1: 情報収集完了率
+- Worker2: 執筆完了率
+- Worker3: チャート作成完了率
+
+進捅遅延があれば、即座に原因究明と対応
+```
+
+## Integration
+```
+Worker1完了 → データをWorker2/3に即座に共有
+Worker2/3完了 → boss1が統合・品質チェック
+boss1チェック完了 → Presidentに最終報告
+```
+
+## Deliverables Template
+```
+【完了報告】boss1 [時刻]
+
+## 全Worker完了！
+
+### Worker1（調査担当）
+- 所要時間: XX分
+- 成果物: [ファイル一覧]
+
+### Worker2（執筆担当）
+- 所要時間: XX分
+- 成果物: [ファイル一覧]
+
+### Worker3（チャート担当）
+- 所要時間: XX分
+- 成果物: [ファイル一覧]
+
+## 品質チェック
+- ✅ 情報の正確性
+- ✅ データの整合性
+- ✅ 数値の根拠明記
+
+## 次のステップ
+[統合・最終チェックの予定]
+```
+
+## Best Practices
+1. Workersに並行作業をさせる
+2. Worker1の完了を待たずにWorker2/3に作業開始（既存資料活用）
+3. データの正確性を最優先
+4. 15-30分ごとの進捗報告を求める

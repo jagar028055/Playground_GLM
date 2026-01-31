@@ -5,7 +5,7 @@
 # エージェント→tmuxターゲット マッピング
 get_agent_target() {
     case "$1" in
-        "president") echo "president" ;;
+        "president") echo "president:0.0" ;;
         "boss1") echo "multiagent:0.0" ;;
         "worker1") echo "multiagent:0.1" ;;
         "worker2") echo "multiagent:0.2" ;;
